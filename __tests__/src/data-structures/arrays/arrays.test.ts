@@ -32,4 +32,20 @@ describe('Arrays', () => {
         expect(daysOfWeek[5]).toBe('Friday')
     })
 
+    it('should insert an item at the end of the array', () => {
+        let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        
+        expect(numbers.length).toBe(10)
+        
+        numbers[numbers.length] = 10
+        
+        expect(numbers.length).toBe(11)
+        expect(numbers[10]).toBe(10)
+
+        numbers.push(11)
+        
+        expect(numbers.length).toBe(12)
+        expect(numbers[11]).toBe(11)
+    })
+
 })
