@@ -3,6 +3,7 @@ import { describe, it, expect } from "vitest";
 declare global {
     interface Array<T> {
         insertToFirstPosition(value: any): void
+        removeToFirstPosition(): any
     }
 }
 
@@ -83,4 +84,28 @@ describe('Arrays', () => {
         numbers.pop()
         expect(numbers[4]).toBeUndefined()
     })
+
+    it('should remove an item from the beginning of the array', () => {
+        Array.prototype.removeToFirstPosition = function() {
+            for(let i = 0; i < this.length; i++) {
+                this[i] = this[i + 1]
+            }
+            // re-index
+            const newArray = []
+            for(let i = 0; i < this.length; i++) {
+                if (this[i] !== undefined) newArray.push(this[i] as never)
+            }
+            return newArray
+        }
+
+        let numbers = [1,2,3,4,5]
+        expect(numbers.length).toBe(5)
+
+        numbers = numbers.removeToFirstPosition()
+        expect(numbers[0]).toBe(2)
+
+        numbers.shift()
+        expect(numbers[0]).toBe(3)
+    })
+
 })
