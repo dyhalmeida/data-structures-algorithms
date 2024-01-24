@@ -6,4 +6,16 @@ describe('Arrays', () => {
         expect(daysOfWeek.length).toBe(0)
     })
 
+    it('should initialize an array with the days of the week', () => {
+        const daysOfWeek = [
+            'Sunday',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday'
+        ]
+        expect(daysOfWeek.length).toBe(7)
+    })
 })
