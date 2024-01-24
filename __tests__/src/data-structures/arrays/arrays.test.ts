@@ -1,4 +1,11 @@
 import { describe, it, expect } from "vitest";
+
+declare global {
+    interface Array<T> {
+        insertToFirstPosition(value: any): void
+    }
+}
+
 describe('Arrays', () => {
 
     it('should initialize an empty array', () => {
@@ -46,6 +53,28 @@ describe('Arrays', () => {
         
         expect(numbers.length).toBe(12)
         expect(numbers[11]).toBe(11)
+    })
+
+    it('should insert an item at the beginning of the array', () =>{
+        Array.prototype.insertToFirstPosition = function(value: any) {
+            for(let i = this.length; i >= 0; i--) {
+                const index = i
+                const newIndex = index - 1
+                this[index] = this[newIndex]
+                if (index === 0) this[index] = value
+            }
+        }
+
+        const numbers = [1, 2, 3, 4, 5]
+        numbers.insertToFirstPosition(20)
+
+        expect(numbers.length).toBe(6)
+        expect(numbers[0]).toBe(20)
+
+        numbers.unshift(11)
+
+        expect(numbers.length).toBe(7)
+        expect(numbers[0]).toBe(11)
     })
 
 })
