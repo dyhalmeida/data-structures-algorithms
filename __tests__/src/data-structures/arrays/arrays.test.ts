@@ -18,4 +18,18 @@ describe('Arrays', () => {
         ]
         expect(daysOfWeek.length).toBe(7)
     })
+
+    it('should access an array item through its index', () => {
+        const daysOfWeek = [
+            'Sunday',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday'
+        ]
+        expect(daysOfWeek[5]).toBe('Friday')
+    })
+
 })
