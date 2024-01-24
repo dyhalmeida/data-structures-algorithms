@@ -132,4 +132,26 @@ describe('Arrays', () => {
         }
     })
 
+    it('should iterate through the items of a multidimensional array', () => {
+        const averageTemp = [
+            [
+                [72, 75, 79, 79, 81, 81],
+            ], 
+            [
+                [72, 75, 79, 79, 81, 81],
+            ],
+            [
+                [72, 75, 79, 79, 81, 81],
+            ]
+        ]
+        
+        for(let x = 0; x < averageTemp.length; x++) {
+            for(let y = 0; y < averageTemp[x].length; y++) {
+                for(let z = 0; z < averageTemp[x][y].length; z++) {
+                    expect(averageTemp[x][y][z]).toBeDefined()
+                }
+            }
+        }
+    })
+
 })
