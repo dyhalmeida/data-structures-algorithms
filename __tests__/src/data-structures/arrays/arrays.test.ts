@@ -77,4 +77,10 @@ describe('Arrays', () => {
         expect(numbers[0]).toBe(11)
     })
 
+    it('should remove an item from the end of the array', () => {
+        const numbers = [1,2,3,4,5]
+        expect(numbers[4]).toBe(5)
+        numbers.pop()
+        expect(numbers[4]).toBeUndefined()
+    })
 })
