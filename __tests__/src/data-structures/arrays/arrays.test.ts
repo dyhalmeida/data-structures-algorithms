@@ -119,4 +119,17 @@ describe('Arrays', () => {
         expect(numbers).toEqual([4,7,8])
     })
 
+    it('should iterate through the items of a two-dimensional array', () => {
+        const averageTemp = [
+            [72, 75, 79, 79, 81, 81],
+            [81, 79, 75, 75, 73, 73]
+        ]
+
+        for(let i = 0; i < averageTemp.length; i++) {
+            for(let j = 0; j < averageTemp[i].length; j++) {
+                expect(averageTemp[i][j]).toBeDefined()
+            }
+        }
+    })
+
 })
