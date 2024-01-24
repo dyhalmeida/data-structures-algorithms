@@ -108,4 +108,15 @@ describe('Arrays', () => {
         expect(numbers[0]).toBe(3)
     })
 
+    it('should remove a number of elements from an array, starting from the specified index, including the value of the index itself', () => {
+        const numbers = [1,2,3,4,5,6,7,8]
+        expect(numbers).toEqual([1,2,3,4,5,6,7,8])
+
+        numbers.splice(4, 2)
+        expect(numbers).toEqual([1,2,3,4,7,8])
+
+        numbers.splice(0, 3)
+        expect(numbers).toEqual([4,7,8])
+    })
+
 })
