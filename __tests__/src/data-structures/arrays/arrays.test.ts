@@ -239,4 +239,15 @@ describe('Arrays', () => {
         expect(entries.next().done).toBeTruthy()
     })
 
+    it('should access the values of an array through @@iterator keys and return index', () => {
+        const numbers = [1,2,3,4,5]
+        const entries = numbers.keys()
+        expect(entries.next().value).toBe(0)
+        expect(entries.next().value).toBe(1)
+        expect(entries.next().value).toBe(2)
+        expect(entries.next().value).toBe(3)
+        expect(entries.next().value).toBe(4)
+        expect(entries.next().done).toBeTruthy()
+    })
+
 })
