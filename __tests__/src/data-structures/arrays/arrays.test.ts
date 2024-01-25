@@ -201,4 +201,12 @@ describe('Arrays', () => {
         expect(evens).toStrictEqual([2,4,6])
     })
 
+    it('should sum all the numbers in the array using Array.reduce', () => {
+        const numbers =[10,20,30,40]
+        const total = numbers.reduce((previous, current) => {
+            return previous + current
+        }, 0)
+        expect(total).toBe(100)
+    })
+
 })
