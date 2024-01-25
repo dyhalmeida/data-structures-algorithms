@@ -228,4 +228,15 @@ describe('Arrays', () => {
         expect(iterator.next().value).toBeUndefined()
     })
 
+    it('should access the values of an array through @@iterator entries and return [index, value]', () => {
+        const numbers = [1,2,3,4,5]
+        const entries = numbers.entries()
+        expect(entries.next().value).toStrictEqual([0, 1])
+        expect(entries.next().value).toStrictEqual([1, 2])
+        expect(entries.next().value).toStrictEqual([2, 3])
+        expect(entries.next().value).toStrictEqual([3, 4])
+        expect(entries.next().value).toStrictEqual([4, 5])
+        expect(entries.next().done).toBeTruthy()
+    })
+
 })
