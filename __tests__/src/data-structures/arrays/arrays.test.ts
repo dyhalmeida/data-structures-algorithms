@@ -178,4 +178,12 @@ describe('Arrays', () => {
         expect(numers.some(isEven)).toBeTruthy()
     })
 
+    it('should iterate the array using Array.forEach', () => {
+        const numbers = [1,2,3,4,5]
+        numbers.forEach((number) => {
+            expect(number).toBeDefined()
+            expect(number).toBeTypeOf('number')
+        })
+    })
+
 })
