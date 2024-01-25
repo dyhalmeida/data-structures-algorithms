@@ -217,4 +217,15 @@ describe('Arrays', () => {
        }
     })
 
+    it('should access the values of an array through @@iterator', () => {
+        const numbers = [1,2,3,4,5]
+        const iterator = numbers[Symbol.iterator]()
+        expect(iterator.next().value).toBe(1)
+        expect(iterator.next().value).toBe(2)
+        expect(iterator.next().value).toBe(3)
+        expect(iterator.next().value).toBe(4)
+        expect(iterator.next().value).toBe(5)
+        expect(iterator.next().value).toBeUndefined()
+    })
+
 })
