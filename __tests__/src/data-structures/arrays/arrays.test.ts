@@ -170,4 +170,12 @@ describe('Arrays', () => {
         expect(numers.every(isEven)).toBeFalsy()
     })
 
+    it('should return true if the number array contains an even number using Array.some', () => {
+        const isEven = (value: number) => value % 2 === 0
+
+        const numers = [1,2,3,4]
+
+        expect(numers.some(isEven)).toBeTruthy()
+    })
+
 })
