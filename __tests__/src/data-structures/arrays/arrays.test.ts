@@ -209,4 +209,12 @@ describe('Arrays', () => {
         expect(total).toBe(100)
     })
 
+    it('should iterate the array using for...of', () => {
+        const numbers = [1,2,3,4,5]
+       for (const number of numbers) {
+        expect(number).toBeDefined()
+        expect(number).toBeTypeOf('number')
+       }
+    })
+
 })
