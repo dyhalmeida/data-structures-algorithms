@@ -186,4 +186,12 @@ describe('Arrays', () => {
         })
     })
 
+    it('should map the array by setting true for even numbers and false for odd numbers using Array.map', () => {
+        const isEven = (value: number) => value % 2 === 0
+
+        const numbers = [1,2,3,4,5,6]
+        const mapped = numbers.map(isEven)
+        expect(mapped).toStrictEqual([false, true, false, true, false, true])
+    })
+
 })
