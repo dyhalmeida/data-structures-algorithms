@@ -154,4 +154,12 @@ describe('Arrays', () => {
         }
     })
 
+    it('should join/concatenate elements of two or more arrays using Array.concat', () => {
+        const zero = 0
+        const positiveNumbers = [1,2,3,4,5]
+        const negativeNumbers = [-5,-4,-3,-2,-1]
+        const allNumbers = negativeNumbers.concat(zero, positiveNumbers)
+        expect(allNumbers).toEqual([-5,-4,-3,-2,-1,0,1,2,3,4,5])
+    })
+
 })
