@@ -194,4 +194,11 @@ describe('Arrays', () => {
         expect(mapped).toStrictEqual([false, true, false, true, false, true])
     })
 
+    it('should return an array with only even numbers using Array.filter', () => {
+        const isEven = (value: number) => value % 2 === 0
+        const numbers = [1,2,3,4,5,6]
+        const evens = numbers.filter(isEven)
+        expect(evens).toStrictEqual([2,4,6])
+    })
+
 })
