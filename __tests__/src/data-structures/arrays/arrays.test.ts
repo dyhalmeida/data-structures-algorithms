@@ -162,4 +162,12 @@ describe('Arrays', () => {
         expect(allNumbers).toEqual([-5,-4,-3,-2,-1,0,1,2,3,4,5])
     })
 
+    it('should return false if the number array contains an odd number using Array.every', () => {
+        const isEven = (value: number) => value % 2 === 0
+
+        const numers = [1,2,3,4]
+
+        expect(numers.every(isEven)).toBeFalsy()
+    })
+
 })
