@@ -367,4 +367,10 @@ describe('Arrays', () => {
         expect(numbers.indexOf(10)).toBe(-1) // not found
     })
 
+    it('should search an array element by index, using Array.lastIndexOf', () => {
+        const numbers = [1,2,3,4,5]
+        expect(numbers.lastIndexOf(5)).toBe(4) // found
+        expect(numbers.lastIndexOf(6)).toBe(-1) // not found
+    })
+
 })
