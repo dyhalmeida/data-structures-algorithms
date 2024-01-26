@@ -305,4 +305,44 @@ describe('Arrays', () => {
         expect(numbers).toStrictEqual([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])
     })
 
+    it('should sort the array of people objects by age, using Array.sort', () => {
+       const peoples = [
+        {
+            name: 'Diego',
+            age: 31
+        },
+        {
+            name: 'Laura',
+            age: 8
+        },
+        {
+            name: 'Mayara',
+            age: 27
+        }
+       ]
+
+       type IPeople = typeof peoples[0]
+       const compare = (a: IPeople, b: IPeople) => {
+        if (a.age === b.age) return 0
+        return a.age > b.age ? 1 : -1
+       }
+
+       peoples.sort(compare)
+
+       expect(peoples).toStrictEqual([
+        {
+            name: 'Laura',
+            age: 8
+        },
+        {
+            name: 'Mayara',
+            age: 27
+        },
+        {
+            name: 'Diego',
+            age: 31
+        }
+       ])
+    })
+
 })
