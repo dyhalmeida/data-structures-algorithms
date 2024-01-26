@@ -261,4 +261,10 @@ describe('Arrays', () => {
         expect(entries.next().done).toBeTruthy()
     })
 
+    it('should create a copy of an array using Array.from', () => {
+        const numbers = [1,2,3,4,5]
+        const clone = Array.from(numbers)
+        expect(clone).toStrictEqual(numbers)
+    })
+
 })
