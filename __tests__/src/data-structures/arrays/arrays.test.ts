@@ -267,4 +267,9 @@ describe('Arrays', () => {
         expect(clone).toStrictEqual(numbers)
     })
 
+    it('should create an array using Array.of', () => {
+      const numbers = Array.of(1,2,3,4,5)
+      expect(numbers).toStrictEqual([1,2,3,4,5])
+    })
+
 })
