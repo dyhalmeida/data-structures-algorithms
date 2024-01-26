@@ -345,4 +345,15 @@ describe('Arrays', () => {
        ])
     })
 
+    it('should sort an array of strings using Array.sort', () => {
+        const compare = (a: string, b: string) => {
+            a = a.toLowerCase()
+            b = b.toLowerCase()
+            if (a === b) return 0
+            return a > b ? 1 : -1
+        }
+        const names = ['Diego', 'davi', 'Laura', 'Mayara', 'marcos']
+        expect(names.sort(compare)).toStrictEqual(['davi', 'Diego', 'Laura', 'marcos', 'Mayara'])
+    })
+
 })
