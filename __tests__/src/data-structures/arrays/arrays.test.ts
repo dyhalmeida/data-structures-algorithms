@@ -289,4 +289,10 @@ describe('Arrays', () => {
         expect(numbers).toStrictEqual([4,5,3,4,5])
     })
 
+    it('should copy values 4 and 5 to position 1 and 2 of the array, using Array.copyWithin', () => {
+        const numbers = [1,2,3,4,5,6,7,8]
+        numbers.copyWithin(1, 3, 5)
+        expect(numbers).toStrictEqual([1,4,5,4,5,6,7,8])
+    })
+
 })
