@@ -361,4 +361,10 @@ describe('Arrays', () => {
         expect(names.sort((a, b) => a.localeCompare(b))).toStrictEqual(["Ânderson","César","Diego","Juçara","Thaissa"])
     })
 
+    it('should search an array element by index, using Array.indexOf', () => {
+        const numbers = [1,2,3,4,5]
+        expect(numbers.indexOf(3)).toBe(2) // found
+        expect(numbers.indexOf(10)).toBe(-1) // not found
+    })
+
 })
