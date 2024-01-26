@@ -356,4 +356,9 @@ describe('Arrays', () => {
         expect(names.sort(compare)).toStrictEqual(['davi', 'Diego', 'Laura', 'marcos', 'Mayara'])
     })
 
+    it('should sort an array of accented strings using Array.sort', () => {
+        const names = ['Diego', 'Thaissa', 'Ânderson', 'César', 'Juçara']
+        expect(names.sort((a, b) => a.localeCompare(b))).toStrictEqual(["Ânderson","César","Diego","Juçara","Thaissa"])
+    })
+
 })
