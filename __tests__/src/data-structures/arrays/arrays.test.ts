@@ -272,4 +272,9 @@ describe('Arrays', () => {
       expect(numbers).toStrictEqual([1,2,3,4,5])
     })
 
+    it('should create an array of size 5, with all items equal to 1, using Array.fill', () => {
+        const array = Array(5).fill(1)
+        expect(array).toStrictEqual([1,1,1,1,1])
+    })
+
 })
