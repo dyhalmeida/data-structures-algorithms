@@ -277,4 +277,10 @@ describe('Arrays', () => {
         expect(array).toStrictEqual([1,1,1,1,1])
     })
 
+    it('should fill an existing array from index 1 to 3, with values equal to 10, using Array.fill', () => {
+        const numbers = [1,2,3,4,5,6,7,8]
+        numbers.fill(10, 1, 4)
+        expect(numbers).toStrictEqual([1,10,10,10,5,6,7,8])
+    })
+
 })
