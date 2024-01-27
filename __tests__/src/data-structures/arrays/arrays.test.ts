@@ -397,4 +397,9 @@ describe('Arrays', () => {
         expect(numbers.includes(6)).toBeFalsy()
     })
 
+    it('should convert an array to string, using Array.toString', () => {
+        const numbers = [1,2,3,4,5]
+        expect(numbers.toString()).toBe('1,2,3,4,5')
+    })
+
 })
