@@ -373,4 +373,13 @@ describe('Arrays', () => {
         expect(numbers.lastIndexOf(6)).toBe(-1) // not found
     })
 
+    it('should find the first value that is a multiple of 13, using Array.find', () => {
+        const getMultipleOf13 = (element: number) => element % 13 === 0
+        const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
+        const multipleOf13 = numbers.find(getMultipleOf13)
+
+        expect(multipleOf13).toBe(13)
+    })
+
 })
