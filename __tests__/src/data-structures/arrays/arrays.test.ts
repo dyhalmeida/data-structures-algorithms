@@ -391,4 +391,10 @@ describe('Arrays', () => {
         expect(index).toBe(12)
     })
 
+    it('should check if the element exists in the array, using Array.includes', () => {
+        const numbers = [1,2,3,4,5]
+        expect(numbers.includes(3)).toBeTruthy()
+        expect(numbers.includes(6)).toBeFalsy()
+    })
+
 })
