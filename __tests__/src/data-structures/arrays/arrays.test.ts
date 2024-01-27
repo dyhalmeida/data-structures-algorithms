@@ -402,4 +402,9 @@ describe('Arrays', () => {
         expect(numbers.toString()).toBe('1,2,3,4,5')
     })
 
+    it('should convert an array to a hyphen-separated string using Array.join', () => {
+        const numbers = [1,2,3,4,5]
+        expect(numbers.join('-')).toBe('1-2-3-4-5')
+    })
+
 })
