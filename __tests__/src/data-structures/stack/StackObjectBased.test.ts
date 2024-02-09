@@ -39,3 +39,11 @@ describe('StackObejctBased', () => {
         expect(stack.isEmpty()).toBeFalsy()
     })
 
+    it('should get the stack size', () => {
+        const stack = new StackObjectBased<number>()
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        expect(stack.size()).toBe(3)
+    })
+
