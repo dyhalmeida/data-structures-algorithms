@@ -30,3 +30,12 @@ describe('StackObejctBased', () => {
         expect(topItem).toBe(3)
     })
 
+    it('should check if the stack is empty', () => {
+        const stack = new StackObjectBased<number>()
+        expect(stack.isEmpty()).toBeTruthy()
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        expect(stack.isEmpty()).toBeFalsy()
+    })
+
