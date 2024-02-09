@@ -57,3 +57,11 @@ describe('StackObejctBased', () => {
         expect(stack.size()).toBe(0)
     })
 
+    it('should convert a stack to a string', () => {
+        const stack = new StackObjectBased<number>()
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        expect(stack.toString()).toBe('123')
+    })
+})
