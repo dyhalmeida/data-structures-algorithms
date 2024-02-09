@@ -21,3 +21,12 @@ describe('StackObejctBased', () => {
         expect(stack.peek()).toBe(2)
     })
 
+    it('should get the top element of the stack', () => {
+        const stack = new StackObjectBased<number>()
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        const topItem = stack.peek()
+        expect(topItem).toBe(3)
+    })
+
