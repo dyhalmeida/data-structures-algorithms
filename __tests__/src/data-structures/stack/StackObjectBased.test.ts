@@ -47,3 +47,13 @@ describe('StackObejctBased', () => {
         expect(stack.size()).toBe(3)
     })
 
+    it('should clear the stack', () => {
+        const stack = new StackObjectBased<number>()
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        expect(stack.size()).toBe(3)
+        stack.clear()
+        expect(stack.size()).toBe(0)
+    })
+
