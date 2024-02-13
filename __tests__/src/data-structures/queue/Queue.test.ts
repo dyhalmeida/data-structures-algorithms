@@ -61,4 +61,12 @@ describe('Queue', () => {
         expect(queue.size()).toBe(0)
     })
 
+    it('should convert the queue to a string', () => {
+        const queue = new Queue<number>()
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        expect(queue.toString()).toBe('1, 2, 3')
+    })
+
 })
