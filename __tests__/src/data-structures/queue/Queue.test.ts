@@ -10,4 +10,17 @@ describe('Queue', () => {
         queue.enqueue(4)
         expect(queue.size()).toBe(4)
     })
+
+    it('should remove items from the queue', () => {
+        const queue = new Queue<number>()
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        queue.enqueue(4)
+        expect(queue.size()).toBe(4)
+        const item = queue.denqueue()
+        expect(item).toBe(1)
+        expect(queue.size()).toBe(3)
+    })
+
 })
