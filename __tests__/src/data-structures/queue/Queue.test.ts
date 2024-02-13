@@ -87,4 +87,12 @@ describe('Queue', () => {
         expect(queue.toString()).toBe('')
     })
 
+    it('should return undefined when trying to view the first item in the empty queue', () => {
+        const queue = new Queue<number>()
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        queue.clear()
+        expect(queue.peek()).toBeUndefined()
+    })
 })
