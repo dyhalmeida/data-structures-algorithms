@@ -43,4 +43,12 @@ describe('Queue', () => {
         expect(queue.isEmpety()).toBeTruthy()
     })
 
+    it('should check the queue size', () => {
+        const queue = new Queue<number>()
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        expect(queue.size()).toBe(3)
+    })
+
 })
