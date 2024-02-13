@@ -51,4 +51,14 @@ describe('Queue', () => {
         expect(queue.size()).toBe(3)
     })
 
+    it('should clear the queue', () => {
+        const queue = new Queue<number>()
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        expect(queue.size()).toBe(3)
+        queue.clear()
+        expect(queue.size()).toBe(0)
+    })
+
 })
