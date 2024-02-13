@@ -23,4 +23,13 @@ describe('Queue', () => {
         expect(queue.size()).toBe(3)
     })
 
+    it('should display the first item in the queue', () => {
+        const queue = new Queue<number>()
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        queue.enqueue(4)
+        expect(queue.peek()).toBe(1)
+    })
+
 })
