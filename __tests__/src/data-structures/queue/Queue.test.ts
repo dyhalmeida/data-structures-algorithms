@@ -78,4 +78,13 @@ describe('Queue', () => {
         expect(queue.denqueue()).toBeUndefined()
     })
 
+    it('should return an empty string when trying to convert an empty queue to string', () => {
+        const queue = new Queue<number>()
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        queue.clear()
+        expect(queue.toString()).toBe('')
+    })
+
 })
