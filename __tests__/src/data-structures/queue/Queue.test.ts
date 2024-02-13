@@ -32,4 +32,15 @@ describe('Queue', () => {
         expect(queue.peek()).toBe(1)
     })
 
+    it('should check if the queue is empty', () => {
+        const queue = new Queue<number>()
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        queue.enqueue(4)
+        expect(queue.isEmpety()).toBeFalsy()
+        queue.clear()
+        expect(queue.isEmpety()).toBeTruthy()
+    })
+
 })
