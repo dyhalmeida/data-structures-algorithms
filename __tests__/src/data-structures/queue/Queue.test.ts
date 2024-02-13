@@ -69,4 +69,13 @@ describe('Queue', () => {
         expect(queue.toString()).toBe('1, 2, 3')
     })
 
+    it('should return undefined when trying to remove an item from the empty queue', () => {
+        const queue = new Queue<number>()
+        queue.enqueue(1)
+        queue.enqueue(2)
+        queue.enqueue(3)
+        queue.clear()
+        expect(queue.denqueue()).toBeUndefined()
+    })
+
 })
