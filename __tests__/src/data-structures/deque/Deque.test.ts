@@ -53,4 +53,11 @@ describe('Deque', () => {
         expect(deque.peekBack()).toBe(1)
     })
 
+    it('should get an item from the start of the deque', () => {
+        const deque = new Deque<number>()
+        deque.addToBack(3)
+        deque.addToBack(2)
+        deque.addToBack(1)
+        expect(deque.peekFront()).toBe(3)
+    })
 })
