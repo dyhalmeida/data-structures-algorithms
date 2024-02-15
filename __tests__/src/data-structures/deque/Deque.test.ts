@@ -23,4 +23,13 @@ describe('Deque', () => {
         expect(deque.peekBack()).toBe(2)
     })
 
+    it('should insert items at the beginning of the deque', () => {
+        const deque = new Deque<number>()
+        deque.addToFront(3)
+        deque.addToFront(2)
+        deque.addToFront(1)
+        expect(deque.peekFront()).toBe(1)
+        expect(deque.peekBack()).toBe(3)
+    })
+
 })
